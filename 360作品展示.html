@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>360全屏案例</title>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+    <!--引入全屏插件-->
+    <script>
+        $(function(){
+            $("#container").fullpage({
+                afterLoad:function(a,i){
+                    $(".section").removeClass("current");
+                    setTimeout(function(){
+                        $(".section").eq(i-1).addClass("current")
+                    },200)
+                }
+            })
+        })
+    </script>
+   <div id="container">
+       <div class="section firstSection">
+           <div class="logo"></div>
+           <div class="text">
+               <img src="images/text_1.png" alt="">
+               <img src="images/text_2.png" alt="">
+               <img src="images/text_3.png" alt="">
+               <img src="images/text_4.png" alt="">
+               <img src="images/text_5.png" alt="">
+               <img src="images/text_6.png" alt="">
+               <img src="images/text_7.png" alt="">
+               <img src="images/text_8.png" alt="">
+           </div>
+           <div class="info"></div>
+       </div>
+       <div class="section secondSection">
+            <div class="shied">
+                <img src="images/shield_1.png" alt="">
+                <img src="images/shield_2.png" alt="">
+                <img src="images/shield_3.png" alt="">
+                <img src="images/shield_4.png" alt="">
+                <img src="images/shield_5.png" alt="">
+                <img src="images/shield_6.png" alt="">
+                <img src="images/shield_7.png" alt="">
+                <img src="images/shield_8.png" alt="">
+                <img src="images/shield_9.png" alt="">
+            </div>
+           <div class="info1"></div>
+       </div>
+       <div class="section thirdSection">
+            <div class="info1"></div>
+            <div class="info2"></div>
+            <div class="rocket"></div>
+       </div>
+       <div class="section forthSection">
+           <div class="toolBar">
+               <div class="key"></div>
+               <div class="search"></div>
+               <div class="wrap">
+                   <div class="result"></div>
+               </div>
+           </div>
+           <div class="info4"></div>
+       </div>
+       <div class="section fifthSection">
+           <div class="info"></div>
+            <div class="brower">
+               <div class="topBar"></div>
+                <div class="topBarBox"></div>
+               <div class="line top"></div>
+               <div class="line right"></div>
+               <div class="line bottom"></div>
+               <div class="line left"></div>
+             <div class="bottomBar"></div>
+              <div class="bottomBarBox"></div>
+           </div>
+
+       </div>
+   </div>
+</body>
+</html>
